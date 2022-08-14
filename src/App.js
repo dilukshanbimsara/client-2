@@ -17,7 +17,7 @@ import Session from "./pages/Manager/js/Session";
 import Membership from "./pages/Manager/js/Membership";
 import SampleForm from "./component/Form/SampleForm";
 import FormData from "./component/Form/FormData";
-
+import Test from "./component/Table/test";
 
 const List = [
   {id:1, name: "John Doe" , Age: 27},
@@ -27,12 +27,44 @@ const List = [
 
 const colNames = ['id','Name','Age']
 
+let array1 = [
+  {
+    title: "First Name",
+    for: "exampleInputEmail1",
+    type: "text",
+    placeholder: "First Name",
+    id: "f-name",
+  },
+  {
+    title: "Last Name",
+    for: "exampleInputEmail1",
+    type: "text",
+    placeholder: "Last Name",
+    id: "l-name",
+  },
+  {
+    title: "e-mail",
+    for: "exampleInputEmail1",
+    type: "email",
+    placeholder: "Email",
+    id: "email",
+  },
+  {
+    title: "Contact",
+    for: "exampleInputEmail1",
+    type: "number",
+    placeholder: "Contact Number",
+    id: "contact",
+  },
+];
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         {/* <FogotPassForm /> */}
         {/* <ResetPassForm /> */}
+        {/* {<>test</>} */}
         <Routes>
           <Route path="/ResetPassword" element={<ResetPassForm />} />
           <Route path="/FogotPassword" element={<FogotPassForm/>} />
@@ -44,10 +76,10 @@ function App() {
           <Route path="/manager/FormData" element={<FormData />} />
           <Route path="/manager/CricketRanking"  element={<CricketRanking/>}/>
           <Route path="/manager/Session"  element={<Session/>}/>
-          <Route path="/manager/Membership"  element={<Membership/>}/>
-          <Route path="/manager/SampleForm" element={<SampleForm />} />
+          {/* <Route path="/manager/Membership"  element={<Membership/>}/> */}
+          {/* <Route path="/manager/SampleForm" element={<SampleForm arr={array1} upload = {true} />} /> */}
 
-          {/* <Route path="/Search" element={<SearchTable/>} />/ */}
+          <Route path="/test" element={<Test/>} />
         </Routes>
       </BrowserRouter>
     </div>
